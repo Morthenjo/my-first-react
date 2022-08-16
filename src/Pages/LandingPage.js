@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, NavLink } from "react-router-dom";
 import AboutMePage from "./landingPage/About Me";
 import CatFacts from "./landingPage/Cat Facts";
 import MyStuff from "./landingPage/My Stuff";
@@ -8,21 +8,43 @@ export default function app() {
   return (
     <div>
       <nav>
-        <Link to="/about-me" className="navBtn">
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive ? "navBtn activeStyle" : "navBtn"
+          }
+        >
           About me
-        </Link>
-        <Link to="/cat-facts" className="navBtn">
+        </NavLink>
+        <NavLink
+          to="/cat-facts"
+          className={({ isActive }) =>
+            isActive ? "navBtn activeStyle" : "navBtn"
+          }
+        >
           Cat Facts
-        </Link>
-        <Link to="/my-stuff" className="navBtn">
+        </NavLink>
+        <NavLink
+          to="/my-stuff"
+          className={({ isActive }) =>
+            isActive ? "navBtn activeStyle" : "navBtn"
+          }
+        >
           My stuff
-        </Link>
-        <Link to="/random" className="navBtn">
+        </NavLink>
+        <NavLink
+          to="/random"
+          className={({ isActive }) =>
+            isActive ? "navBtn activeStyle" : "navBtn"
+          }
+        >
           Random
-        </Link>
+        </NavLink>
       </nav>
       <Routes>
-        <Route path="/about-me" element={<AboutMePage />} />
+        <Route path="*" element={<h1>ERROR</h1>} />
+        <Route path="/" element={<AboutMePage />} />
         <Route path="/cat-facts" element={<CatFacts />} />
         <Route path="/my-stuff" element={<MyStuff />} />
         <Route path="/random" element={<Random />} />

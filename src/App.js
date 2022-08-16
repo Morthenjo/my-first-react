@@ -1,13 +1,11 @@
 import "./App.css";
+import LandingPage from "./Pages/LandingPage.js";
 import { HashRouter } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
     <HashRouter>
-      <div>
-        <LandingPage />
-      </div>
+      <LandingPage />
     </HashRouter>
   );
 }
