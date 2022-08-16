@@ -8,10 +8,18 @@ export default function app() {
   return (
     <div>
       <nav>
-        <Link to="/about-me">About me</Link>
-        <Link to="/cat-facts">Cat Facts</Link>
-        <Link to="/my-stuff">My stuff</Link>
-        <Link to="/random">Random</Link>
+        <Link to="/about-me" className="navBtn">
+          About me
+        </Link>
+        <Link to="/cat-facts" className="navBtn">
+          Cat Facts
+        </Link>
+        <Link to="/my-stuff" className="navBtn">
+          My stuff
+        </Link>
+        <Link to="/random" className="navBtn">
+          Random
+        </Link>
       </nav>
       <Routes>
         <Route path="/about-me" element={<AboutMePage />} />
