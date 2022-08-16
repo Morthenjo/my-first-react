@@ -11,8 +11,5 @@ body {
 }
 
 .activeStyle {
-  display: inline;
-  padding: 8px;
-  background-color: red;
   text-decoration: underline;
 }
