@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.1f9c7e09.css","mappings":"AAAA,KAEE,QAAS,CADT,SAEF,CAEA,QAGE,oBAAqB,CAFrB,cAAe,CACf,WAEF","sources":["App.css"],"sourcesContent":["body {\n  padding: 0;\n  margin: 0;\n}\n\n.navBtn {\n  display: inline;\n  padding: 8px;\n  background-color: red;\n}\n"],"names":[],"sourceRoot":""}
