@@ -1,15 +1,41 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: gray;
 }
 
 .navBtn {
   display: inline;
-  padding: 8px;
-  background-color: red;
+  font-size: 48px;
+  padding: 18px;
+  color: rgb(184, 184, 184);
   text-decoration: none;
 }
 
+.navBtn:hover {
+  background-color: rgb(33, 33, 33);
+}
+
 .activeStyle {
+  display: inline;
+  font-size: 48px;
+  padding: 18px;
+  color: white;
   text-decoration: underline;
+}
+
+.activeStyle:hover {
+  background-color: rgb(33, 33, 33);
+}
+
+nav {
+  text-align: center;
+}
+
+.box {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  background-color: antiquewhite;
+  padding: 30px;
 }
