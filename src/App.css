@@ -54,4 +54,27 @@ nav {
 
 .center {
   text-align: center;
+  font-size: 3rem;
+}
+
+.paragraph {
+  width: 400px;
+  font-size: 1.5rem;
+}
+
+.newCatFact {
+  padding: 0 1rem;
+  margin-top: 40px;
+  max-height: 2rem;
+  font-size: 1.5rem;
+  background-color: blue;
+  color: whitesmoke;
+  border-color: red;
+  border-radius: 10px;
+  border-width: 3px;
+  cursor: pointer;
+}
+
+.newCatFact:hover {
+  background-color: brown;
 }

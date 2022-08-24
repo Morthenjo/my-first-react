@@ -29,10 +29,12 @@ export default function CatFacts2() {
       <div className="box">
         <div className="flex">
           <h1 className="center">Pussy facts</h1>
-          <button onClick={refresh}>New Cat Fact</button>
+          <button onClick={refresh} className="newCatFact">
+            New Cat Fact
+          </button>
         </div>
         <div className="flex">
-          <p>{data}</p>
+          <p className="paragraph">{data}</p>
           <Cat />
         </div>
       </div>
