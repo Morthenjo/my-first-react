@@ -22,7 +22,7 @@ export default function CatFacts() {
 
   if (data) {
     return (
-      <div>
+      <div className="box">
         <h1>Pussy facts</h1>
         {data.map((item, idx) => (
           <p key={idx}>{item.fact}</p>
@@ -31,13 +31,13 @@ export default function CatFacts() {
     );
   } else if (apiError) {
     return (
-      <div>
+      <div className="box">
         <h1>Failed to load pussy, please try again.</h1>
       </div>
     );
   } else {
     return (
-      <div>
+      <div className="box">
         <h1>Here comes the pussies</h1>
       </div>
     );
