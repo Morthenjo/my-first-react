@@ -1,17 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Cat from "../../components/cat";
 
-export default function CatFacts() {
+export default function CatFacts2() {
   const [apiError, setApiError] = useState();
   const [data, setData] = useState();
 
-  // eslint-disable-next-line
+  function refresh() {
+    window.location.reload(false);
+  }
+
   useEffect(() => {
     const getData = () => {
       axios
-        .get("https://catfact.ninja/facts")
+        .get("https://catfact.ninja/fact")
         .then((res) => {
-          setData(res.data.data);
+          setData(res.data.fact);
         })
         .catch((res) => {
           setApiError(res);
@@ -23,10 +27,14 @@ export default function CatFacts() {
   if (data) {
     return (
       <div className="box">
-        <h1>Pussy facts</h1>
-        {data.map((item, idx) => (
-          <p key={idx}>{item.fact}</p>
-        ))}
+        <div className="flex">
+          <h1 className="center">Pussy facts</h1>
+          <button onClick={refresh}>New Cat Fact</button>
+        </div>
+        <div className="flex">
+          <p>{data}</p>
+          <Cat />
+        </div>
       </div>
     );
   } else if (apiError) {

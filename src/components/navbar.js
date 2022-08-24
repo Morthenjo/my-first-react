@@ -5,6 +5,7 @@ import HomePage from "../Pages/landingPage/HomePage";
 import MyStuff from "../Pages/landingPage/My Stuff";
 import Random from "../Pages/landingPage/Random";
 import ErrorPage from "../Pages/landingPage/ErrorPage";
+import CatFacts2 from "../Pages/landingPage/cat fact 2";
 
 export default function Navbar() {
   return (
@@ -31,6 +32,12 @@ export default function Navbar() {
           Cat Facts
         </NavLink>
         <NavLink
+          to="/catfact2"
+          className={({ isActive }) => (isActive ? "activeStyle" : "navBtn")}
+        >
+          Cat Facts 2
+        </NavLink>
+        <NavLink
           to="/my-stuff"
           className={({ isActive }) => (isActive ? "activeStyle" : "navBtn")}
         >
@@ -48,6 +55,7 @@ export default function Navbar() {
         <Route path="/" element={<HomePage />} />
         <Route path="/About-me" element={<AboutMePage />} />
         <Route path="/cat-facts" element={<CatFacts />} />
+        <Route path="/catfact2" element={<CatFacts2 />} />
         <Route path="/my-stuff" element={<MyStuff />} />
         <Route path="/random" element={<Random />} />
       </Routes>
