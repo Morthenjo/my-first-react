@@ -3,11 +3,10 @@ import AboutMePage from "../Pages/landingPage/About Me";
 import CatFacts from "../Pages/landingPage/Cat Facts";
 import HomePage from "../Pages/landingPage/HomePage";
 import MyStuff from "../Pages/landingPage/My Stuff";
-import Random from "../Pages/landingPage/Random";
 import ErrorPage from "../Pages/landingPage/ErrorPage";
 import CatFacts2 from "../Pages/landingPage/cat fact 2";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <div>
       <nav>
@@ -44,7 +43,7 @@ export default function Navbar() {
           My stuff
         </NavLink>
         <NavLink
-          to="/random"
+          to="/UseContext"
           className={({ isActive }) => (isActive ? "activeStyle" : "navBtn")}
         >
           Random
@@ -57,8 +56,9 @@ export default function Navbar() {
         <Route path="/cat-facts" element={<CatFacts />} />
         <Route path="/catfact2" element={<CatFacts2 />} />
         <Route path="/my-stuff" element={<MyStuff />} />
-        <Route path="/random" element={<Random />} />
       </Routes>
     </div>
   );
-}
+};
+
+export default Navbar;
