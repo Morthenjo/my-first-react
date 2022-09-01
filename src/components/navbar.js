@@ -5,6 +5,7 @@ import HomePage from "../Pages/landingPage/HomePage";
 import MyStuff from "../Pages/landingPage/My Stuff";
 import ErrorPage from "../Pages/landingPage/ErrorPage";
 import CatFacts2 from "../Pages/landingPage/cat fact 2";
+import CounterContextPage from "../Pages/landingPage/CounterContext";
 
 const Navbar = () => {
   return (
@@ -43,10 +44,10 @@ const Navbar = () => {
           My stuff
         </NavLink>
         <NavLink
-          to="/UseContext"
+          to="/counter"
           className={({ isActive }) => (isActive ? "activeStyle" : "navBtn")}
         >
-          Random
+          Counter
         </NavLink>
       </nav>
       <Routes>
@@ -56,6 +57,7 @@ const Navbar = () => {
         <Route path="/cat-facts" element={<CatFacts />} />
         <Route path="/catfact2" element={<CatFacts2 />} />
         <Route path="/my-stuff" element={<MyStuff />} />
+        <Route path="/counter" element={<CounterContextPage />} />
       </Routes>
     </div>
   );

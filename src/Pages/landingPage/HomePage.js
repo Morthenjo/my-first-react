@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CounterContext } from "../../ContextState/CounterContext";
 
 export default function HomePage() {
-  const { count, setCount } = useContext(CounterContext);
+  const { count } = useContext(CounterContext);
   return (
     <div data-aos="fade-up">
       <h1>Welcome</h1>
